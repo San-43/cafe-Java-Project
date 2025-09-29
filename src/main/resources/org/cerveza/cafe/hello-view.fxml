@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.cerveza.cafe.HelloController" spacing="12" alignment="CENTER_LEFT"
+      prefWidth="600" prefHeight="300">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24" />
+    </padding>
+    <children>
+        <Label text="Cafetería - Panel de información" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+        <Label text="Ubicación de la base de datos:" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+        <Label fx:id="databaseLocationLabel" wrapText="true" style="-fx-font-size: 14px;" />
+        <Label fx:id="statusLabel" style="-fx-font-size: 14px;" />
+    </children>
+</VBox>

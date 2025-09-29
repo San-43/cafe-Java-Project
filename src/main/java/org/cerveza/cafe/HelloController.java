@@ -4,11 +4,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private Label databaseLocationLabel;
+
+    @FXML
+    private Label statusLabel;
+
+    @FXML
+    public void initialize() {
+        databaseLocationLabel.setText(DatabaseManager.getDatabasePath().toString());
+        statusLabel.setText("La base de datos se inicializó correctamente.");
     }
 }
