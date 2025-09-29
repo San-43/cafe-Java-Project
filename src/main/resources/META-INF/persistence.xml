@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.1"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd">
+    <persistence-unit name="CafePU" transaction-type="RESOURCE_LOCAL">
+        <provider>com.objectdb.jpa.Provider</provider>
+        <class>org.cerveza.cafe.model.Producto</class>
+        <class>org.cerveza.cafe.model.Receta</class>
+        <class>org.cerveza.cafe.model.ProporcionIngrediente</class>
+        <class>org.cerveza.cafe.model.Paso</class>
+        <class>org.cerveza.cafe.model.Ingrediente</class>
+        <class>org.cerveza.cafe.model.Inventario</class>
+        <class>org.cerveza.cafe.model.Tienda</class>
+        <class>org.cerveza.cafe.model.Cliente</class>
+        <class>org.cerveza.cafe.model.ProductoVendido</class>
+        <class>org.cerveza.cafe.model.IngredienteTienda</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="$objectdb/db/cafe.odb"/>
+            <property name="objectdb.temp.no-detached" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
