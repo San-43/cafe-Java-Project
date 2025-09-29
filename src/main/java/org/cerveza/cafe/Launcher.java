@@ -17,7 +17,7 @@ import java.util.Map;
 public class Launcher {
     public static void main(String[] args) {
         seedDatabase();
-        Application.launch(HelloApplication.class, args);
+        System.out.println("OKKKKK");
     }
 
     private static void seedDatabase() {
