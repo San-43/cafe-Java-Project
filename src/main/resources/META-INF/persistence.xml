@@ -16,7 +16,7 @@
         <class>org.cerveza.cafe.model.ProductoVendido</class>
         <class>org.cerveza.cafe.model.IngredienteTienda</class>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="$objectdb/db/cafe.odb"/>
+            <property name="jakarta.persistence.jdbc.url" value="C:\Users\virgo\Downloads\cafe.odb"/>
             <property name="objectdb.temp.no-detached" value="true"/>
         </properties>
     </persistence-unit>
