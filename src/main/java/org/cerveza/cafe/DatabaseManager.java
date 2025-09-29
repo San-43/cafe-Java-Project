@@ -4,7 +4,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import org.cerveza.cafe.model.Cliente;
-import org.cerveza.cafe.model.DumpRecord;
 import org.cerveza.cafe.model.Ingrediente;
 import org.cerveza.cafe.model.IngredienteTienda;
 import org.cerveza.cafe.model.Inventario;
@@ -102,8 +101,6 @@ public final class DatabaseManager {
             long tiendas = entityManager.createQuery("SELECT COUNT(t) FROM Tienda t", Long.class).getSingleResult();
             long ingredientes = entityManager.createQuery("SELECT COUNT(i) FROM Ingrediente i", Long.class).getSingleResult();
             long recetas = entityManager.createQuery("SELECT COUNT(r) FROM Receta r", Long.class).getSingleResult();
-            long dumps = entityManager.createQuery("SELECT COUNT(d) FROM DumpRecord d", Long.class).getSingleResult();
-
             if (clientes == 0L && productos == 0L && tiendas == 0L && ingredientes == 0L && recetas == 0L) {
                 Cliente ana = new Cliente(1L, "Ana Torres");
                 ana.setTelefono("555-0101");
@@ -218,15 +215,6 @@ public final class DatabaseManager {
                 entityManager.persist(ventaMarco);
                 entityManager.persist(cafeEnTienda);
                 entityManager.persist(lecheEnTienda);
-            }
-
-            if (dumps == 0L) {
-                DumpRecord dumpRecord = new DumpRecord(
-                        databasePath.getFileName().toString(),
-                        databasePath.toString(),
-                        LocalDateTime.now()
-                );
-                entityManager.persist(dumpRecord);
             }
 
             entityManager.getTransaction().commit();

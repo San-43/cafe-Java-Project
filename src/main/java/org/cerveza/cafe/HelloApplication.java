@@ -25,9 +25,9 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dump-list-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 480);
-        stage.setTitle("Historial de dumps de base de datos");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 640, 360);
+        stage.setTitle("Cafetería - Información de la base de datos");
         stage.setScene(scene);
         stage.show();
     }
