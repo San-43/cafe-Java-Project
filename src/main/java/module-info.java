@@ -10,7 +10,10 @@ module org.cerveza.cafe {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires jakarta.persistence;
 
     opens org.cerveza.cafe to javafx.fxml;
     exports org.cerveza.cafe;
+    opens org.cerveza.cafe.model;
+    exports org.cerveza.cafe.model;
 }
